@@ -36,6 +36,12 @@ Comments provided above basically creates 4 different container that prints out 
     ```
     mode http
     ```
+## SSL
+```
+$apt install letsencrypt
+$certbot certonly --standalone
+$cat /etc/letsencrypt/live/haproxy.ahmetfd.com/fullchain.pem /etc/letsencrypt/live/haproxy.ahmetfd.com/privkey.pem | tee /etc/letsencrypt/live/haproxy.pem //To add two documents end-to-end and create a new document
+```
 
 ## Role Variables
 
@@ -46,6 +52,7 @@ Comments provided above basically creates 4 different container that prints out 
 ## Requirements
 - haproxy
 - Docker
+- Letsencrypt
 
 ## Supported Distributions
 - Centos7
